@@ -5,7 +5,7 @@ resource "aws_instance" "example" {
 
   tags = {
     Name = "terraform-state-demo1"
-    Project = "roboshop"
+    Project = "roboshopPractice"
   }
 }
 
