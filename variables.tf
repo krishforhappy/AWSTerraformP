@@ -8,7 +8,7 @@ variable "instance_type" {
   default = "t3.micro"
 }
 
-variable "tags" {
+/* variable "tags" {
   type = map(any)
   default = {
     Name        = "terraform-state-demo1"
@@ -16,4 +16,12 @@ variable "tags" {
     terraform   = "true"
     environment = "dev"
   }
+} */
+
+variable "instances" {
+  type = list
+  default = ["mongodb", "redis", "mysql", "rabbitmq", "catalogue", "user", "cart", "shipping", "payment", "frontend"]
 }
+
+
+
