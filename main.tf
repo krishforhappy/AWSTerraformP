@@ -1,12 +1,13 @@
 resource "aws_instance" "example" {
-  count = 10
+  # count                  = 10
   ami                    = var.ami
   instance_type          = var.instance_type
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
 
   tags = {
-    Name        = "${var.instances[count.index]}_prod"
-    Project     = "roboshop"
+    # Name    = "${var.instances[count.index]}_prod"
+    Name    = "remotestatepractice12"
+    Project = "roboshop"
   }
 }
 
